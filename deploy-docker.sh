@@ -20,8 +20,8 @@ if docker ps -a --format 'table {{.Names}}' | grep -q "^${CONTAINER_NAME}$"; the
 fi
 
 # Pull the latest image
-echo "⬇️  Pulling latest image from GCR..."
-docker pull gcr.io/${PROJECT_ID}/${IMAGE_NAME}:latest
+echo "⬇️  Pulling latest amitok2 image from GCR..."
+docker pull gcr.io/${PROJECT_ID}/${IMAGE_NAME}:latest-amitok2
 
 # Run the container
 echo "▶️  Starting container..."
@@ -33,7 +33,7 @@ docker run -d \
     -e ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}" \
     -e OPENAI_ENFORCE_ONE_TOOL_CALL_PER_RESPONSE=true \
     --restart unless-stopped \
-    gcr.io/${PROJECT_ID}/${IMAGE_NAME}:latest
+    gcr.io/${PROJECT_ID}/${IMAGE_NAME}:latest-amitok2
 
 echo "✅ Claude Code GPT-5 Proxy deployed successfully!"
 echo "🔗 Proxy URL: http://localhost:${PORT}"

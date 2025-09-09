@@ -10,8 +10,10 @@ This guide explains how to deploy the Claude Code GPT-5 proxy using Docker and G
 The Docker images are available in Google Container Registry:
 
 ```
-gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest
-gcr.io/neat-scheme-463713-p9/claude-code-gpt5:v1.0.0
+gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest-amitok2  # From amitok2 fork
+gcr.io/neat-scheme-463713-p9/claude-code-gpt5:amitok2        # From amitok2 fork
+gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest         # Original version
+gcr.io/neat-scheme-463713-p9/claude-code-gpt5:v1.0.0         # Original version
 ```
 
 ## 🚀 Quick Start
@@ -58,7 +60,7 @@ docker run -d \
   -e ANTHROPIC_API_KEY="your-anthropic-api-key" \
   -e OPENAI_ENFORCE_ONE_TOOL_CALL_PER_RESPONSE=true \
   --restart unless-stopped \
-  gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest
+  gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest-amitok2
 ```
 
 ## 📋 Environment Variables

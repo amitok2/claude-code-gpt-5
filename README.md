@@ -118,7 +118,7 @@ docker run -d \
   -p 4000:4000 \
   -e OPENAI_API_KEY="your-openai-api-key" \
   -e ANTHROPIC_API_KEY="your-anthropic-api-key" \
-  gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest
+  gcr.io/neat-scheme-463713-p9/claude-code-gpt5:latest-amitok2
 ```
 
 ### Docker Compose
